@@ -28,12 +28,12 @@ python3 scan.py -H example.com
 
 The port address(es) of the entered address to be scanned. (Scans only ports specified with comma in the -p option)
 ```sh
-python3 scan.py -H example.com -p 80,144
+python3 scan.py -H 192.168.1.34 -p 80,144
  ```
 
 The port address range of the entered address to be scanned. (Scans all ports between the 2 values specified in the -r option)
 ```sh
-python3 scan.py -H example.com -r 80,144
+python3 scan.py -H 127.0.0.1 -r 80,144
  ```
  
 ## Contact
