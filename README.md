@@ -22,7 +22,7 @@ python3 scan.py
 
 ### Example Usages:
 The web address or IP address to be scanned. (Scans specified address only with default ports)
-└─── ```sh
+ ```sh
 python3 scan.py -H example.com
  ```
 
