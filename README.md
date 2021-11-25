@@ -5,7 +5,7 @@
 
 * Clone the repo:
  ```sh
-git clone https://github.com/encoderpie/portScanner.git
+git clone https://github.com/encoderpie/PortScanner.git
  ```
  
 ## Usage
