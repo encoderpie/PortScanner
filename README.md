@@ -21,21 +21,21 @@ python3 scan.py
   -r <port range, ex: 80,1024>
 
 ### Example Usages:
+The web address or IP address to be scanned. (Scans specified address only with default ports)
 ```sh
 python3 scan.py -H example.com
  ```
-The web address or IP address to be scanned. (Scans specified address only with default ports)
 
+The port address(es) of the entered address to be scanned. (Scans only ports specified with comma in the -p option)
 ```sh
 python3 scan.py -H example.com -p 80,144
  ```
-The port address(es) of the entered address to be scanned. (Scans only ports specified with comma in the -p option)
 
+The port address range of the entered address to be scanned. (Scans all ports between the 2 values specified in the -r option)
 ```sh
 python3 scan.py -H example.com -r 80,144
  ```
-The port address range of the entered address to be scanned. (Scans all ports between the 2 values specified in the -r option)
-
+ 
 ## Contact
 Bug reports and feedback for:
 Discord: encoderpie#3312
