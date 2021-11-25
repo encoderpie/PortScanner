@@ -5,7 +5,7 @@ Scan ports of website or ip address
 
 * Clone the repo
  ```sh
-  git clone https://github.com/encoderpie/portScanner.git
+git clone https://github.com/encoderpie/portScanner.git
  ```
  
 ## Usage
