@@ -20,7 +20,7 @@ python3 scan.py
   -p <port, ex: 80 or 80,144,265>
   -r <port range, ex: 80,1024>
 
-* Example Usages:
+### Example Usages:
 ```sh
 python3 scan.py -H example.com
  ```
