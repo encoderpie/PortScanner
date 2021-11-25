@@ -1,5 +1,5 @@
 # Port Scanner
-> Scan ports of website or ip address
+> Scan ports of ip address or website
 
 ## Installation / Git Clone
 
