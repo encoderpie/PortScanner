@@ -15,7 +15,7 @@ git clone https://github.com/encoderpie/PortScanner.git
 python3 scan.py
  ```
  
-* Options:
+#### Options:
 * -H <host address, ex: 192.168.1.30 or example.com>
 * -p <port, ex: 80 or 80,144,265>
 * -r <port range, ex: 80,1024>
