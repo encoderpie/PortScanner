@@ -16,9 +16,9 @@ python3 scan.py
  ```
  
 * Options:
-  -H <host address, ex: 192.168.1.30 or example.com>
-  -p <port, ex: 80 or 80,144,265>
-  -r <port range, ex: 80,1024>
+* -H <host address, ex: 192.168.1.30 or example.com>
+* -p <port, ex: 80 or 80,144,265>
+* -r <port range, ex: 80,1024>
 
 ### Example Usages:
 The web address or IP address to be scanned. (Scans specified address only with default ports)
