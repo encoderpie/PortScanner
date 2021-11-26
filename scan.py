@@ -13,10 +13,13 @@ class defaultPorts:
 def hostScan(targetHost,targetPorts):
   try:
     targetIp = gethostbyname(targetHost)
-    targetName = gethostbyaddr(targetIp)
-    if (len(targetName[0]) > len(targetIp)):
-      stickLen = len(targetName[0])
-    else: 
+    try:
+      targetName = gethostbyaddr(targetIp)
+      if (len(targetName[0]) > len(targetIp)):
+        stickLen = len(targetName[0])
+      else: 
+        stickLen = len(targetIp)
+    except:
       stickLen = len(targetIp)
     infoG = colors.G + " [INFO] " + colors.ENDC
     infoR = colors.R + " [INFO] " + colors.ENDC
@@ -81,29 +84,31 @@ def main():
     if targetHost == None:
       exit(0)
     else:
-      if targetPortMain == ['None'] and targetPortRange == ['None']:
-        targetPorts = defaultPorts.dp
-      elif targetPortMain == ['None']:
-        if targetPortRange[0] == ['None'] and targetPortRange[1] == ['None']:
-          print(parser.usage)
-          exit(0)
-        else:
-          portRange = []
-          if targetPortRange[0]>targetPortRange[1]:
-            tpr1 = int(targetPortRange[0])+1
-            tpr2 = int(targetPortRange[1])
-            while tpr1 != tpr2:
-              portRange.append(tpr2)
-              tpr2=tpr2+1
-          elif targetPortRange[0]<targetPortRange[1]:
-            tpr1 = int(targetPortRange[0])
-            tpr2 = int(targetPortRange[1])+1
-            while tpr1 != tpr2:
-              portRange.append(tpr1)
-              tpr1=tpr1+1
-          targetPorts = portRange
+      if targetPortMain != ['None'] and targetPortRange != ['None']:
+        exit(0)
       else:
-        targetPorts = targetPortMain
+        if targetPortMain == ['None']:
+          if targetPortRange == ['None']:
+            targetPorts = defaultPorts.dp
+          elif targetPortRange[1] == ['None']:
+            exit(0)
+          else:
+            portRange = []
+            if targetPortRange[0]>targetPortRange[1]:
+              tpr1 = int(targetPortRange[0])+1
+              tpr2 = int(targetPortRange[1])
+              while tpr1 != tpr2:
+                portRange.append(tpr2)
+                tpr2=tpr2+1
+            elif targetPortRange[0]<targetPortRange[1]:
+              tpr1 = int(targetPortRange[0])
+              tpr2 = int(targetPortRange[1])+1
+              while tpr1 != tpr2:
+                portRange.append(tpr1)
+                tpr1=tpr1+1
+            targetPorts = portRange
+        else:
+          targetPorts = targetPortMain
   except:
     print(parser.usage)
     exit(0)
