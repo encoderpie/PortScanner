@@ -3,11 +3,18 @@ from threading import *
 import optparse
 import os
 
-class colors:
-  G = '\033[92m' # Green
-  R = '\033[91m' # Red
-  ENDC = '\033[0m'
-  C = '\033[96m' # Cyan
+if os.name == "posix":
+  class colors:
+    G = '\033[92m'
+    R = '\033[91m'
+    ENDC = '\033[0m'
+    C = '\033[96m'
+else:
+  class colors:
+    G = ''
+    R = ''
+    ENDC = ''
+    C = ''
 
 class defaultPorts:
   dp = ['20','21','22','23','25','53','67','68','80','161','162','123','443','7104','7102','7105']
