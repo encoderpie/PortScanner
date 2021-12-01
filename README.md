@@ -38,4 +38,4 @@ python3 scan.py -H 127.0.0.1 -r 80,144
  
 ## Contact
 Bug reports and feedback for:
-Discord: encoderpie#3312
+Discord Server & Discord Username: discord.com/invite/Rnny2wF9MD & encoderpie#3312
